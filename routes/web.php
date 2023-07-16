@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NoteController;
+use App\Http\Controllers\PostController;
 
-// Pasar parametros con url como por ejemplo el id que es opcional
-Route::get('/product/{id?}',[Controller::class, 'function'])->name('example');
+Route::resource('/note',NoteController::class);
+
+Route::resource('/post',PostController::class);
